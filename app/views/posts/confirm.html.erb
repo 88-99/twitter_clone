@@ -1,0 +1,7 @@
+<h3>以下の内容で投稿します。よろしいですか？</h3>
+<%= form_with(model: @post, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+  <p>~ ~ ~ 投稿内容 ~ ~ ~</p>
+    <%= @post.content %>
+  <%= form.submit  "投稿する" %>
+<% end %>

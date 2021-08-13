@@ -33,6 +33,9 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to posts_path, notice:"投稿を削除しました！"
   end
+  def confirm
+    @post = Post.new(post_params)
+  end
   private
   def set_post
     @post = Post.find(params[:id])
