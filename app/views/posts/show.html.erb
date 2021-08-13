@@ -4,4 +4,4 @@
 <br>
 <%= link_to '一覧画面に戻る', posts_path %>
 <%= link_to '内容を編集する', edit_post_path(@post.id) %>
-<%= link_to '投稿を削除する', post_path(@post.id), method: :delete %>
+<%= link_to '投稿を削除する', post_path(@post.id), method: :delete,data: { confirm: '削除します。よろしいですか？'} %>
