@@ -9,6 +9,9 @@ class PostsController < ApplicationController
     Post.create(params.require(:post).permit(:title, :content))
     redirect_to new_post_path
   end
+  def show
+    @post = Post.find(params[:id])
+  end
   private
   def post_params
     params.require(:post).permit( :content)
