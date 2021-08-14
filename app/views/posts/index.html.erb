@@ -1,12 +1,13 @@
 <h1>リスト</h1>
 <p><%= notice %></p>
-
+<div class="content">
 <table>
 <% @posts.each do |post| %>
   <tr>
-    <td><%= post.content %></td>
-    <td><%= link_to 'このつぶやきへGO!', post_path(post.id) %></td>
+    <td><p><%= post.content %></p></td>
+    <td><p><%= link_to 'このつぶやきへGO!', post_path(post.id) %></p></td>
   </tr>
 <% end %>
 </table>
-<%= link_to 'つぶやく',  new_post_path %>
+</div>
+<div class="new"><%= link_to 'つぶやく',  new_post_path %></div>
