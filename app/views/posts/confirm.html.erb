@@ -1,8 +1,8 @@
-<h3>以下の内容で投稿します。よろしいですか？</h3>
+<h3>以下の内容でつぶやきます。よろしいですか？</h3>
 <%= form_with(model: @post, local: true) do |form| %>
   <%= form.hidden_field :content %>
-  <p>~ ~ ~ 投稿内容 ~ ~ ~</p>
+  <p>~ ~ ~ つぶやき ~ ~ ~</p>
     <%= @post.content %>
-  <%= form.submit  "投稿する" %>
+  <%= form.submit  "つぶやく" %>
   <%= form.submit "戻る", name: 'back' %>
 <% end %>

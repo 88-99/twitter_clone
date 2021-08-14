@@ -1,7 +1,7 @@
-<h1>~ ~ ~ 投稿内容 ~ ~ ~</h1>
+<h1>~ ~ ~ あなたのつぶやき ~ ~ ~</h1>
 <p><%= @post.content %></p><br>
 <br>
 <br>
-<%= link_to '一覧画面に戻る', posts_path %>
-<%= link_to '内容を編集する', edit_post_path(@post.id) %>
-<%= link_to '投稿を削除する', post_path(@post.id), method: :delete,data: { confirm: '削除します。よろしいですか？'} %>
+<%= link_to 'リストに戻る', posts_path %>
+<%= link_to '編集する', edit_post_path(@post.id) %>
+<%= link_to '削除する', post_path(@post.id), method: :delete,data: { confirm: '削除します。よろしいですか？'} %>

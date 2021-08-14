@@ -1,11 +1,12 @@
-<h1>投稿一覧</h1>
+<h1>リスト</h1>
 <p><%= notice %></p>
+
 <table>
 <% @posts.each do |post| %>
   <tr>
     <td><%= post.content %></td>
-    <td><%= link_to '投稿内容へGO!', post_path(post.id) %></td>
+    <td><%= link_to 'このつぶやきへGO!', post_path(post.id) %></td>
   </tr>
 <% end %>
 </table>
-<%= link_to '新しく投稿する！',  new_post_path %>
+<%= link_to 'つぶやく',  new_post_path %>

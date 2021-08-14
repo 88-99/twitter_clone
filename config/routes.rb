@@ -4,4 +4,6 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
+  root to: 'tops#index'
+  get '/tops', to: 'tops#index'
 end
